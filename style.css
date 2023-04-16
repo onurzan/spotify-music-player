@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;500;700&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Caveat:wght@500;700&family=Cinzel:wght@400;600&family=Comfortaa:wght@300;400;500&family=Commissioner:wght@100;300;500;700&family=Inter:wght@100;300;500;700;900&family=Kumbh+Sans:wght@300;500&family=Lato:wght@300;400;900&family=Lexend:wght@200;300;400&family=Martian+Mono:wght@100;300;500;700&family=Open+Sans&family=Orbitron:wght@400;500;600&family=Poppins:wght@300;500;700;900&family=Raleway:wght@100;200;300;400;500;700;900&family=Saira:wght@100;200;300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to top, #000000, #808080);
+}
+
+/* MUSIC PLAYER */
+.music-player {
+  font-size: 16px;
+  width: 80vw;
+  max-width: 25rem;
+  background-color: #808080;
+  padding: 3em 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px #101013cc;
+  border-radius: 8px;
+}
+
+img {
+  width: 100%;
+  margin-top: 1.25em;
+  border-radius: 1rem;
+  max-height: 300px;
+  box-shadow: 0 0 10px rgba;
+}
+
+#playlist {
+  float: right;
+}
+
+.song-details {
+  margin-top: 1.2rem;
+  font-family: "Lexend", sans-serif;
+  text-align: center;
+}
+
+.song-details #song-name {
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.song-details #song-artist {
+  font-size: 1em;
+}
+
+.player-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1.25rem;
+  margin: 1.25rem 0 0.6rem 0;
+}
+
+.music-player button {
+  border: none;
+  background-color: transparent;
+}
+
+#play,
+#pause {
+  background-color: #f5f5f5;
+  height: 2.5em;
+  width: 2.5em;
+  font-size: 1.8em;
+  color: #000000;
+  border-radius: 50%;
+}
+
+#prev,
+#next {
+  color: #000000;
+  font-size: 1.4em;
+}
+
+#shuffle,
+#repeat {
+  color: #303030;
+  font-size: 1em;
+}
+
+.hide {
+  display: none;
+}
+
+#progress-bar {
+  position: relative;
+  width: 100%;
+  height: 0.3em;
+  background-color: #000000;
+  margin: 1em 0;
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+#current-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  color: #414141;
+  background-color: #adadad;
+  height: 100%;
+  width: 0%;
+  border-radius: 2em;
+}
+
+.time-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Lexend", sans-serif;
+}
+
+#playlist-container {
+  background-color: #808080;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px #000000;
+  font-family: "Lexend", sans-serif;
+  overflow: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#close-button {
+  background-color: transparent;
+  border: none;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+  margin-left: 90%;
+  font-size: 20px;
+  position: fixed;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.playlist-song-details {
+  margin-left: 1rem;
+}
+
+.playlist-image-container {
+  width: 4em;
+  margin-left: 10px;
+}
+
+.playlist-song-details > span {
+  display: block;
+}
+
+#playlist-song-artist-album {
+  color: #292929;
+}
+
+button.active i {
+  color: #8fe00b;
+}
+
+@media screen and (max-width: 450px) {
+  .music-player {
+    font-size: 14px;
+  }
+}

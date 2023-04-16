@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player-JS</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font-Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="music-player">
+      <!-- PLAYLIST ICON-->
+      <button id="playlist">
+        <i class="fa-solid fa-angle-down"></i>
+      </button>
+      <!-- ARTIST IMAGE -->
+      <img src="" alt="" id="song-image" />
+      <!-- SONG DETAILS -->
+      <div class="song-details">
+        <p id="song-name"></p>
+        <p id="song-artist"></p>
+      </div>
+      <!-- PLAYER OPTIONS -->
+      <div class="player-options">
+        <button id="shuffle">
+          <i class="fa-solid fa-shuffle"></i>
+        </button>
+        <button id="prev">
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+        <button id="play">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button id="pause" class="hide">
+          <i class="fa-solid fa-pause"></i>
+        </button>
+        <button id="next">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+        <button id="repeat">
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+      </div>
+      <!-- AUDIO -->
+      <audio id="audio" preload="metadata"></audio>
+      <div id="progress-bar">
+        <div id="current-progress"></div>
+      </div>
+      <!-- TIME -->
+      <div class="time-container">
+        <span id="current-time"></span>
+        <span id="max-duration"></span>
+      </div>
+      <!-- PLAYLIST SECTION-->
+      <div id="playlist-container" class="hide">
+        <button id="close-button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul id="playlist-songs"></ul>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+  </body>
+</html>
